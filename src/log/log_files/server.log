@@ -1,0 +1,2 @@
+[25/02/25 13:52:07][src/server/routes.rs:24] Error: Path not found /favicon.ico
+[25/02/25 13:52:07][src/server/handle.rs:34] Error: 404 Not Found

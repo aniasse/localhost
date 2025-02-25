@@ -1,16 +1,8 @@
-mod server;
-mod config;
-mod cgi;
-mod utils;
-
-use server::Server;
-use config::Config;
+use localhost::log::init_logs;
+use localhost::server::start;
+use localhost::server::config::server_config;
 
 fn main() {
-    // Charger la configuration
-    let config = Config::load("config.yaml").expect("Erreur lors du chargement de la configuration");
-
-    // Démarrer le serveur
-    let mut server = Server::new(config);
-    server.run().expect("Erreur lors de l'exécution du serveur");
+    init_logs();
+    start(server_config());
 }
